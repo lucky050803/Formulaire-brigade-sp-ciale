@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test d'Aptitude - Bureau de Répartition des Spécialisations</title>
+  <style>
+    body {
+      font-family: "Courier New", Courier, monospace;
+      background-color: #f0f0f0;
+      color: #000;
+      padding: 20px;
+    }
+    .container {
+      background-color: #fff;
+      border: 2px solid #000;
+      padding: 30px;
+      width: 800px;
+      margin: auto;
+      box-shadow: 4px 4px 10px #999;
+    }
+    h1, h2 {
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin: 5px 0;
+    }
+    button {
+      margin-top: 20px;
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-weight: bold;
+      background-color: #ccc;
+      border: 2px solid #000;
+      cursor: pointer;
+    }
+    #resultat {
+      margin-top: 30px;
+      padding: 20px;
+      border: 1px dashed #333;
+      background-color: #eef;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Bureau Central de Répartition</h1>
+    <h2>Test d'Aptitude Spécialisée - Division Enquêtes</h2><form id="testForm">
+  <div class="question">
+    <p>1. Lors d’une scène de crime, vous êtes le premier sur place. Que faites-vous ?</p>
+    <label><input type="radio" name="q1" value="investigateur"> J'observe méthodiquement chaque détail.</label>
+    <label><input type="radio" name="q1" value="medecin"> J’examine les corps pour comprendre ce qui s’est passé.</label>
+    <label><input type="radio" name="q1" value="brute"> J’entre, prêt à neutraliser toute menace restante.</label>
+  </div>
+
+  <div class="question">
+    <p>2. Une machine dysfonctionne au QG, vous...</p>
+    <label><input type="radio" name="q2" value="chef"> Ouvrez le capot et réparez ça en 5 minutes.</label>
+    <label><input type="radio" name="q2" value="informaticien"> Vérifiez s’il ne s’agit pas d’un bug logiciel ou d’un piratage.</label>
+    <label><input type="radio" name="q2" value="analyste"> Proposez d’en louer une nouvelle en comparant les coûts.</label>
+  </div>
+
+  <div class="question">
+    <p>3. Vous êtes sous pression en pleine opération, quelle est votre réaction ?</p>
+    <label><input type="radio" name="q3" value="manipulateur"> Je garde mon calme et retourne la situation psychologiquement.</label>
+    <label><input type="radio" name="q3" value="fou"> Je suis guidé par des voix que seuls moi comprends.</label>
+    <label><input type="radio" name="q3" value="tir"> Je vise rapidement et tire avec précision.</label>
+  </div>
+
+  <div class="question">
+    <p>4. Un suspect refuse de parler, vous...</p>
+    <label><input type="radio" name="q4" value="manipulateur"> Utilisez vos talents d'orateur pour briser ses défenses mentales.</label>
+    <label><input type="radio" name="q4" value="brute"> Le menacez physiquement pour obtenir des aveux.</label>
+    <label><input type="radio" name="q4" value="investigateur"> Analysez ses réactions pour repérer les mensonges.</label>
+  </div>
+
+  <div class="question">
+    <p>5. Une autopsie urgente doit être réalisée, vous...</p>
+    <label><input type="radio" name="q5" value="medecin"> Vous chargez immédiatement de l’analyse médicale.</label>
+    <label><input type="radio" name="q5" value="investigateur"> Supervisez la procédure pour recouper avec les indices.</label>
+    <label><input type="radio" name="q5" value="informaticien"> Proposez de la simuler avec un programme de modélisation.</label>
+  </div>
+
+  <div class="question">
+    <p>6. En cas de panne informatique totale, vous...</p>
+    <label><input type="radio" name="q6" value="informaticien"> Rebootez le système et localisez la faille de sécurité.</label>
+    <label><input type="radio" name="q6" value="chef"> Inspectez le matériel pour trouver l'origine physique du problème.</label>
+    <label><input type="radio" name="q6" value="analyste"> Évaluez l’impact économique de l’incident.</label>
+  </div>
+
+  <div class="question">
+    <p>7. En patrouille, vous croisez un individu suspect. Vous...</p>
+    <label><input type="radio" name="q7" value="tir"> Placez votre main sur votre arme, prêt à réagir.</label>
+    <label><input type="radio" name="q7" value="manipulateur"> Engagez une conversation pour sonder ses intentions.</label>
+    <label><input type="radio" name="q7" value="investigateur"> Le suivez discrètement pour en apprendre plus.</label>
+  </div>
+
+  <div class="question">
+    <p>8. Face à un mur de données financières, vous...</p>
+    <label><input type="radio" name="q8" value="analyste"> Identifiez rapidement les anomalies.</label>
+    <label><input type="radio" name="q8" value="informaticien"> Écrivez un script pour trier les données plus vite.</label>
+    <label><input type="radio" name="q8" value="fou"> Reliez les chiffres à des signes que vous seul comprenez.</label>
+  </div>
+
+  <div class="question">
+    <p>9. Une poursuite à pied s'engage, vous...</p>
+    <label><input type="radio" name="q9" value="brute"> Sautez par-dessus les obstacles sans ralentir.</label>
+    <label><input type="radio" name="q9" value="tir"> Prenez position et tentez de le stopper avec précision.</label>
+    <label><input type="radio" name="q9" value="chef"> Utilisez un gadget pour l'immobiliser.</label>
+  </div>
+
+  <div class="question">
+    <p>10. En pleine mission, vous avez une vision étrange. Vous...</p>
+    <label><input type="radio" name="q10" value="fou"> Suivez la voix intérieure, elle vous a toujours guidé.</label>
+    <label><input type="radio" name="q10" value="medecin"> Consultez un collègue, cela pourrait être un symptôme grave.</label>
+    <label><input type="radio" name="q10" value="investigateur"> Notez tout méthodiquement pour analyse ultérieure.</label>
+  </div>
+
+  <button type="button" onclick="evaluerTest()">Soumettre le dossier</button>
+</form>
+
+<div id="resultat"></div>
+
+  </div> <script>
+    function evaluerTest() {
+      const reponses = {
+        investigateur: 0,
+        medecin: 0,
+        brute: 0,
+        chef: 0,
+        informaticien: 0,
+        analyste: 0,
+        manipulateur: 0,
+        fou: 0,
+        tir: 0
+      };
+
+      const form = document.forms["testForm"];
+      const questions = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10"];
+
+      for (let q of questions) {
+        const choix = form[q].value;
+        if (choix in reponses) {
+          reponses[choix]++;
+        }
+      }
+
+      let max = 0;
+      let specialisation = "aucune";
+
+      for (let [key, value] of Object.entries(reponses)) {
+        if (value > max) {
+          max = value;
+          specialisation = key;
+        }
+      }
+
+      const noms = {
+        investigateur: "Investigateur Expert",
+        medecin: "Médecin Urbain",
+        brute: "Brute",
+        chef: "Chef Mécanique",
+        informaticien: "Informaticien",
+        analyste: "Analyste Financier",
+        manipulateur: "Manipulateur",
+        fou: "Fou du Bus (Psychique)",
+        tir: "As du Tir"
+      };
+
+      const result = document.getElementById("resultat");
+      result.innerHTML = `Résultat du dossier : <strong>${noms[specialisation]}</strong><br><br>
+        Merci de vous présenter au bureau de votre spécialisation dans les plus brefs délais.`;
+    }
+  </script></body>
+</html>
